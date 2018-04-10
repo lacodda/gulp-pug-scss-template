@@ -1,0 +1,77 @@
+// Functions
+//------------------------------------------------------------------------------------
+
+// Replace `$search` with `$replace` in `$string`
+// Used on our SVG icon backgrounds for custom forms.
+//
+// @author Hugo Giraudel
+// @param {String} $string - Initial string
+// @param {String} $search - Substring to replace
+// @param {String} $replace ('') - New value
+// @return {String} - Updated string
+@function str-replace($string, $search, $replace: "") {
+  // to string
+  $string: inspect($string);
+
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// String explode by separator
+@function explode($string, $dem) {
+  // to string
+  $string: inspect($string);
+
+  $list: ();
+  $sum: str-length($string);
+
+  @for $i from 1 through $sum {
+    $str: str-index($string, $dem);
+
+    @if str-length($string) >= 1 and $str == null {
+      $list: append($list, $string);
+      $string: '';
+    }
+
+    @if type-of($str) == number {
+      $each: str-slice($string, 0, ($str - 1));
+      $list: append($list, $each);
+      $string: str-slice($string, ($str + 1), $sum);
+    }
+  }
+
+  @return $list;
+}
+
+// Strip units from values
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// Calculate rems from pixels
+@function calc-rem($px, $base: 16) {
+  $px: strip-unit($px);
+  $base: strip-unit($base);
+  @if $px == 1 {
+    @return 1px;
+  }
+  @return ($px / $base) * 1rem;
+}
+
+// Calculating the square root
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+
+  @return $x1;
+}

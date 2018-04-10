@@ -1,0 +1,12 @@
+.idea
+build
+node_modules
+npm-debug.log
+test/results
+test/coverage
+.sass-cache
+*.thumb
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes

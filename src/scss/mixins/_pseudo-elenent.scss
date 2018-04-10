@@ -1,0 +1,28 @@
+@mixin pseudo-element(
+  $el,
+  $content: ''
+) {
+  &::#{$el} {
+    content: $content;
+    @content;
+  }
+}
+
+@mixin before($content: '') {
+  @include pseudo-element(before, $content) {
+    @content;
+  }
+}
+
+@mixin after($content: '') {
+  @include pseudo-element(after, $content) {
+    @content;
+  }
+}
+
+@mixin before-after($content: '') {
+  &::before, &::after {
+    content: $content;
+    @content;
+  }
+}

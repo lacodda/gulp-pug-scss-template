@@ -1,0 +1,88 @@
+// Variables
+//------------------------------------------------------------------------------------
+
+//
+// Colors
+//------------------------------------------------------------------------------------
+$white: #fff !default;
+$gray-100: #eee !default;
+$gray-200: #dcdcdc !default;
+$gray-300: #999 !default;
+$gray-400: #404042 !default;
+$gray-500: #303136 !default;
+$black: #000 !default;
+$blue-100: #00a5ff !default;
+$blue-200: #0974cf !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+
+// Body
+//------------------------------------------------------------------------------------
+
+$body-bg: $white !default;
+$body-color: $gray-500 !default;
+
+// Links
+//------------------------------------------------------------------------------------
+
+$link-color: $blue-200 !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+// Paragraphs
+//------------------------------------------------------------------------------------
+
+$paragraph-margin-bottom: 1rem !default;
+
+// Spacers
+//------------------------------------------------------------------------------------
+
+$spacer: 1rem !default;
+
+// Borders
+//------------------------------------------------------------------------------------
+
+$border-width: .1rem !default;
+
+// Fonts
+//------------------------------------------------------------------------------------
+
+$font-family-sans-serif: 'Raleway', sans-serif, Arial !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-weight-extra-light: 200 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+$font-size-base: 1rem !default;
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+$headings-margin-bottom: ($spacer / 2) !default;
+$headings-font-family: inherit !default;
+$headings-font-weight: $font-weight-extra-light !default;
+$headings-line-height: 1.7 !default;
+$headings-color: inherit !default;
+
+$dt-font-weight: $font-weight-bold !default;
+
+// Tables
+//------------------------------------------------------------------------------------
+
+$table-cell-padding: .5rem;
+$table-caption-color: $gray-400;
+
+// Forms
+//------------------------------------------------------------------------------------
+
+$label-margin-bottom: .5rem;

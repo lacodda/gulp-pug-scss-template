@@ -1,0 +1,12 @@
+extends layouts/main
+
+block head_end
+  link(rel="stylesheet" href="/css/main.min.css")
+
+block content
+  .page__container
+    img.page__logo(src="img/lyrn.svg" alt=header)
+    h1.page__header= header
+
+block body_end
+  script(type="text/javascript" src="/js/main.min.js")
