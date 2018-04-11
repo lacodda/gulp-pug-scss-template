@@ -1,4 +1,3 @@
-/build/
-/dist/
+/build
 /*.js
 /test/unit/coverage/
