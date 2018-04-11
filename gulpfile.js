@@ -19,3 +19,15 @@ gulp.task('default', gulp.series(
 	),
 	gulp.parallel('watch', 'server')));
 
+// Build task.
+gulp.task('build', gulp.series(
+  'clean',
+  gulp.parallel(
+    'pug',
+    'sass',
+    'scripts',
+    'images',
+    'fonts',
+    'favicon',
+  ),
+  gulp.parallel('watch', 'server')));
