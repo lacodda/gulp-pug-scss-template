@@ -1,0 +1,18 @@
+mixin navMenu(name)
+  if prod
+    | {{ SIDEBAR }}
+  else
+    h3.nav__header= name
+    ul.nav__menu
+      li.nav__item.nav__item--active
+        a.nav__link(href='#') item 1
+      li.nav__item
+        a.nav__link(href='#') item 2
+      li.nav__item
+        a.nav__link(href='#') item 3
+
+mixin mainContent()
+  if prod
+    | {{ CONTENT }}
+  else if block
+    block
