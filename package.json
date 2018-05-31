@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Gulp template for creating new web application",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp build",
+    "build:favicon": "gulp favicon"
   },
   "author": "Kirill Lahtachev",
   "license": "MIT",

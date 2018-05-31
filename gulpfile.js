@@ -27,5 +27,4 @@ gulp.task('build', gulp.series(
     'scripts',
     'images',
     'fonts',
-    // 'favicon',
   )));
