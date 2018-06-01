@@ -1,12 +1,14 @@
 extends layouts/main
 
 block head_end
+  // Favicons
+  include components/favicon
   link(rel="stylesheet" href="./assets/css/main.min.css")
 
 block content
-    .page__container
-        img.page__logo(src="/assets/img/lyrn.svg" alt=header)
-        h1.page__header= header
+  .page__container
+    img.page__logo(src="/assets/img/lyrn.svg" alt=header)
+    h1.page__header= header
 
 block body_end
   script(src="./assets/js/main.js")
